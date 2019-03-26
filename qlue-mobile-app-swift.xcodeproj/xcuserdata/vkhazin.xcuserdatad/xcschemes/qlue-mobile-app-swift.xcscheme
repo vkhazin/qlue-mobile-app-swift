@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   version = "1.3">
+   <BuildAction>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForRunning = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1E9D501E115714EA73F68B52"
+               BuildableName = "qlue-mobile-app-swift.app"
+               BlueprintName = "qlue-mobile-app-swift"
+               ReferencedContainer = "container:qlue-mobile-app-swift.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <LaunchAction
+      useCustomWorkingDirectory = "NO"
+      buildConfiguration = "Debug"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1E9D501E115714EA73F68B52"
+            BuildableName = "qlue-mobile-app-swift.app"
+            BlueprintName = "qlue-mobile-app-swift"
+            ReferencedContainer = "container:qlue-mobile-app-swift.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </LaunchAction>
+</Scheme>

@@ -1,0 +1,542 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E9D53501AD95DFB40B27258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D5F3CCEBE1B48EC8BF8D1 /* Assets.xcassets */; };
+		1E9D5632C8290B313FBD920A /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D526395489732D459D0FC /* readme.md */; };
+		1E9D57982BFFC627CA12CEFD /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D598FBCFD96C803DDB943 /* FirstViewController.swift */; };
+		1E9D58081B182D82788BB9D6 /* qlue_mobile_app_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D502B846BBB92580AC94F /* qlue_mobile_app_swiftTests.swift */; };
+		1E9D5C697C9122E0C943FE2B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D5571FC459148B1CFD714 /* SecondViewController.swift */; };
+		1E9D5D2B3AF8CD895FBB207F /* qlue_mobile_app_swiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D5E29BECC3FCDD2C28E89 /* qlue_mobile_app_swiftUITests.swift */; };
+		1E9D5D68F14DB1FF1F23C011 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D5EB611A71BDEECEB4C07 /* Main.storyboard */; };
+		1E9D5E35B65AD48FFB48C566 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D5755A309AB1588E79E4F /* AppDelegate.swift */; };
+		1E9D5FA36A9FE5954519BBB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D5CCC37C722AEE24B3410 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1E9D5522531AD58015382732 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E9D5A1961885D56CBADD4D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E9D501E115714EA73F68B52;
+			remoteInfo = "qlue-mobile-app-swift";
+		};
+		1E9D55F597ACAE79EF411128 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E9D5A1961885D56CBADD4D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E9D501E115714EA73F68B52;
+			remoteInfo = "qlue-mobile-app-swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1E9D502B846BBB92580AC94F /* qlue_mobile_app_swiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qlue_mobile_app_swiftTests.swift; sourceTree = "<group>"; };
+		1E9D50A7FDF07A89472C4942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		1E9D51336C80987FC5F4E303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		1E9D526395489732D459D0FC /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		1E9D5571FC459148B1CFD714 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		1E9D56FD09FEE33E6DCBEFDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		1E9D5755A309AB1588E79E4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1E9D57D8B93478F6C2060F8F /* qlue-mobile-app-swiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "qlue-mobile-app-swiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E9D598FBCFD96C803DDB943 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		1E9D5A3FF7307F9C5FA5B83D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1E9D5E297AD2A1528BC84D04 /* qlue-mobile-app-swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "qlue-mobile-app-swiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E9D5E29BECC3FCDD2C28E89 /* qlue_mobile_app_swiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qlue_mobile_app_swiftUITests.swift; sourceTree = "<group>"; };
+		1E9D5EC8B8FBF2B97E530517 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1E9D5F3CCEBE1B48EC8BF8D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1E9D5F627886564C4A02B6F4 /* qlue-mobile-app-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "qlue-mobile-app-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E9D5B94FDCFA982CC3216EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E9D5D709DF20527007EEE3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E9D5F591E131C124FA0D933 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E9D512BD0A497BD18FC93CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E9D5F627886564C4A02B6F4 /* qlue-mobile-app-swift.app */,
+				1E9D5E297AD2A1528BC84D04 /* qlue-mobile-app-swiftTests.xctest */,
+				1E9D57D8B93478F6C2060F8F /* qlue-mobile-app-swiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1E9D54C16144DEBC34299B17 /* qlue-mobile-app-swiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1E9D56FD09FEE33E6DCBEFDF /* Info.plist */,
+				1E9D5E29BECC3FCDD2C28E89 /* qlue_mobile_app_swiftUITests.swift */,
+			);
+			path = "qlue-mobile-app-swiftUITests";
+			sourceTree = "<group>";
+		};
+		1E9D59AE38EAB13A5326C85B /* qlue-mobile-app-swiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				1E9D51336C80987FC5F4E303 /* Info.plist */,
+				1E9D502B846BBB92580AC94F /* qlue_mobile_app_swiftTests.swift */,
+			);
+			path = "qlue-mobile-app-swiftTests";
+			sourceTree = "<group>";
+		};
+		1E9D5F25CA5CAC3EDC55F437 = {
+			isa = PBXGroup;
+			children = (
+				1E9D512BD0A497BD18FC93CB /* Products */,
+				1E9D5FB320B1F1A566D11C30 /* qlue-mobile-app-swift */,
+				1E9D59AE38EAB13A5326C85B /* qlue-mobile-app-swiftTests */,
+				1E9D54C16144DEBC34299B17 /* qlue-mobile-app-swiftUITests */,
+				1E9D526395489732D459D0FC /* readme.md */,
+			);
+			sourceTree = "<group>";
+		};
+		1E9D5FB320B1F1A566D11C30 /* qlue-mobile-app-swift */ = {
+			isa = PBXGroup;
+			children = (
+				1E9D50A7FDF07A89472C4942 /* Info.plist */,
+				1E9D5F3CCEBE1B48EC8BF8D1 /* Assets.xcassets */,
+				1E9D5CCC37C722AEE24B3410 /* LaunchScreen.storyboard */,
+				1E9D5755A309AB1588E79E4F /* AppDelegate.swift */,
+				1E9D5EB611A71BDEECEB4C07 /* Main.storyboard */,
+				1E9D598FBCFD96C803DDB943 /* FirstViewController.swift */,
+				1E9D5571FC459148B1CFD714 /* SecondViewController.swift */,
+			);
+			path = "qlue-mobile-app-swift";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1E9D501E115714EA73F68B52 /* qlue-mobile-app-swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E9D5383E0FBBC5F84064120 /* Build configuration list for PBXNativeTarget "qlue-mobile-app-swift" */;
+			buildPhases = (
+				1E9D5A94ECB7983C9BFBB764 /* Sources */,
+				1E9D5F591E131C124FA0D933 /* Frameworks */,
+				1E9D5B0D4EFB3A72825EED4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "qlue-mobile-app-swift";
+			productName = "qlue-mobile-app-swift";
+			productReference = 1E9D5F627886564C4A02B6F4 /* qlue-mobile-app-swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1E9D503C7FA8DC34D8B3FF23 /* qlue-mobile-app-swiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E9D5A97001A2DF6E4AEE432 /* Build configuration list for PBXNativeTarget "qlue-mobile-app-swiftTests" */;
+			buildPhases = (
+				1E9D55A351A6FED79733FC8B /* Sources */,
+				1E9D5B94FDCFA982CC3216EA /* Frameworks */,
+				1E9D5DD888794805205CFAA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E9D51D419C57F741C804797 /* PBXTargetDependency */,
+			);
+			name = "qlue-mobile-app-swiftTests";
+			productName = "qlue-mobile-app-swiftTests";
+			productReference = 1E9D5E297AD2A1528BC84D04 /* qlue-mobile-app-swiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1E9D530AF32434845625E617 /* qlue-mobile-app-swiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E9D511C4B2C2F98741D09AA /* Build configuration list for PBXNativeTarget "qlue-mobile-app-swiftUITests" */;
+			buildPhases = (
+				1E9D59089542D4034FC366A5 /* Sources */,
+				1E9D5D709DF20527007EEE3B /* Frameworks */,
+				1E9D5DDF9C661382B5BCCBDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E9D53E823660477967759F3 /* PBXTargetDependency */,
+			);
+			name = "qlue-mobile-app-swiftUITests";
+			productName = "qlue-mobile-app-swiftUITests";
+			productReference = 1E9D57D8B93478F6C2060F8F /* qlue-mobile-app-swiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E9D5A1961885D56CBADD4D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "ICS Solutions";
+			};
+			buildConfigurationList = 1E9D52CB099E1944FC7C75A2 /* Build configuration list for PBXProject "qlue-mobile-app-swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1E9D5F25CA5CAC3EDC55F437;
+			productRefGroup = 1E9D512BD0A497BD18FC93CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E9D501E115714EA73F68B52 /* qlue-mobile-app-swift */,
+				1E9D503C7FA8DC34D8B3FF23 /* qlue-mobile-app-swiftTests */,
+				1E9D530AF32434845625E617 /* qlue-mobile-app-swiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E9D5B0D4EFB3A72825EED4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E9D53501AD95DFB40B27258 /* Assets.xcassets in Resources */,
+				1E9D5FA36A9FE5954519BBB4 /* LaunchScreen.storyboard in Resources */,
+				1E9D5D68F14DB1FF1F23C011 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E9D5DD888794805205CFAA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E9D5DDF9C661382B5BCCBDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E9D55A351A6FED79733FC8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E9D58081B182D82788BB9D6 /* qlue_mobile_app_swiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E9D59089542D4034FC366A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E9D5D2B3AF8CD895FBB207F /* qlue_mobile_app_swiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E9D5A94ECB7983C9BFBB764 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E9D5E35B65AD48FFB48C566 /* AppDelegate.swift in Sources */,
+				1E9D57982BFFC627CA12CEFD /* FirstViewController.swift in Sources */,
+				1E9D5C697C9122E0C943FE2B /* SecondViewController.swift in Sources */,
+				1E9D5632C8290B313FBD920A /* readme.md in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1E9D51D419C57F741C804797 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E9D501E115714EA73F68B52 /* qlue-mobile-app-swift */;
+			targetProxy = 1E9D55F597ACAE79EF411128 /* PBXContainerItemProxy */;
+		};
+		1E9D53E823660477967759F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E9D501E115714EA73F68B52 /* qlue-mobile-app-swift */;
+			targetProxy = 1E9D5522531AD58015382732 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1E9D5CCC37C722AEE24B3410 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E9D5EC8B8FBF2B97E530517 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1E9D5EB611A71BDEECEB4C07 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E9D5A3FF7307F9C5FA5B83D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1E9D50E0769D3CA629B1D825 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "qlue-mobile-app-swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.icssolutions.qlue-mobile-app-swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E9D5164570C314E3F90E9E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/qlue-mobile-app-swift.app/qlue-mobile-app-swift";
+				INFOPLIST_FILE = "qlue-mobile-app-swiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.icssolutions.qlue-mobile-app-swiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+		1E9D52EB6E26E65F2BB33B77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "qlue-mobile-app-swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.icssolutions.qlue-mobile-app-swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1E9D552B4EA54523D2049E03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "qlue-mobile-app-swiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.icssolutions.qlue-mobile-app-swiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "qlue-mobile-app-swift";
+			};
+			name = Release;
+		};
+		1E9D594D9565C22F8CB561E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "qlue-mobile-app-swiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.icssolutions.qlue-mobile-app-swiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "qlue-mobile-app-swift";
+			};
+			name = Debug;
+		};
+		1E9D5BA7B90FDA7C1DBEF7FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1E9D5E6C971EE6E23FEF4412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E9D5FDF87D7C6DA9F158AC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/qlue-mobile-app-swift.app/qlue-mobile-app-swift";
+				INFOPLIST_FILE = "qlue-mobile-app-swiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ca.icssolutions.qlue-mobile-app-swiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E9D511C4B2C2F98741D09AA /* Build configuration list for PBXNativeTarget "qlue-mobile-app-swiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E9D594D9565C22F8CB561E3 /* Debug */,
+				1E9D552B4EA54523D2049E03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1E9D52CB099E1944FC7C75A2 /* Build configuration list for PBXProject "qlue-mobile-app-swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E9D5BA7B90FDA7C1DBEF7FA /* Debug */,
+				1E9D5E6C971EE6E23FEF4412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E9D5383E0FBBC5F84064120 /* Build configuration list for PBXNativeTarget "qlue-mobile-app-swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E9D50E0769D3CA629B1D825 /* Debug */,
+				1E9D52EB6E26E65F2BB33B77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1E9D5A97001A2DF6E4AEE432 /* Build configuration list for PBXNativeTarget "qlue-mobile-app-swiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E9D5FDF87D7C6DA9F158AC3 /* Debug */,
+				1E9D5164570C314E3F90E9E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1E9D5A1961885D56CBADD4D5 /* Project object */;
+}
