@@ -20,8 +20,9 @@
     "timestamp": "2019-03-26T01:07:42.329Z"
   }
  ```
- * To the end-point: POST https://gsqztydwpe.execute-api.us-east-1.amazonaws.com/latest
- * Demonstrate that the background task sends updates when:
+* To the end-point: POST https://gsqztydwpe.execute-api.us-east-1.amazonaws.com/latest
+* Display on the user interface the last json posted
+* Demonstrate that the background task sends updates when:
  1. the app is in the foreground
  2. the app is in the background
  3. the device is in the stand-by mode e.g. the screen is dark
