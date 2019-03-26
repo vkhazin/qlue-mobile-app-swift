@@ -27,6 +27,9 @@
  2. the app is in the background
  3. the device is in the stand-by mode e.g. the screen is dark
  4. no special actions by end user is required to keep updating the location
+ 5. UI code separated from the geo-location and background task code
+ 6. Unit tests for the geo-location collection
+ 7. UI Unit teses for the user interface
 
 ## How to contribute
 
