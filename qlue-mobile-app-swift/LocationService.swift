@@ -121,10 +121,9 @@ extension LocationService {
         self.onLocationUpdate = onLocationUpdate
         
         // Configure and start the service.
-//        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
-//        locationManager.distanceFilter = 100.0  // In meters.
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.distanceFilter = 1.0  // In meters.
+        locationManager.distanceFilter = Config.isProduction ? Config.Production.LocationUpdates.desiredAccuracy : Config.Development.LocationUpdates.desiredAccuracy
+        locationManager.desiredAccuracy = Config.isProduction ? Config.Production.LocationUpdates.desiredAccuracy : Config.Development.LocationUpdates.desiredAccuracy
+        
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
         
