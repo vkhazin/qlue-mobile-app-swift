@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0BAA7402224A80D000A5915F /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAA7401224A80D000A5915F /* LocationService.swift */; };
+		0BAA7404224B834100A5915F /* LocationUpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAA7403224B834100A5915F /* LocationUpdatesViewController.swift */; };
+		0BAA7406224B93D700A5915F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAA7405224B93D700A5915F /* Config.swift */; };
 		1E9D53501AD95DFB40B27258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D5F3CCEBE1B48EC8BF8D1 /* Assets.xcassets */; };
 		1E9D57982BFFC627CA12CEFD /* ForegroundUpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D598FBCFD96C803DDB943 /* ForegroundUpdatesViewController.swift */; };
 		1E9D58081B182D82788BB9D6 /* qlue_mobile_app_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D502B846BBB92580AC94F /* qlue_mobile_app_swiftTests.swift */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		0BAA7401224A80D000A5915F /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		0BAA7403224B834100A5915F /* LocationUpdatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationUpdatesViewController.swift; sourceTree = "<group>"; };
+		0BAA7405224B93D700A5915F /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		1E9D502B846BBB92580AC94F /* qlue_mobile_app_swiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qlue_mobile_app_swiftTests.swift; sourceTree = "<group>"; };
 		1E9D50A7FDF07A89472C4942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		1E9D51336C80987FC5F4E303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 				1E9D5CCC37C722AEE24B3410 /* LaunchScreen.storyboard */,
 				1E9D5755A309AB1588E79E4F /* AppDelegate.swift */,
 				1E9D5EB611A71BDEECEB4C07 /* Main.storyboard */,
+				0BAA7405224B93D700A5915F /* Config.swift */,
+				0BAA7403224B834100A5915F /* LocationUpdatesViewController.swift */,
 				1E9D598FBCFD96C803DDB943 /* ForegroundUpdatesViewController.swift */,
 				1E9D5571FC459148B1CFD714 /* BackgroundUpdatesViewController.swift */,
 				0BAA7401224A80D000A5915F /* LocationService.swift */,
@@ -273,6 +279,8 @@
 				1E9D57982BFFC627CA12CEFD /* ForegroundUpdatesViewController.swift in Sources */,
 				0BAA7402224A80D000A5915F /* LocationService.swift in Sources */,
 				1E9D5C697C9122E0C943FE2B /* BackgroundUpdatesViewController.swift in Sources */,
+				0BAA7404224B834100A5915F /* LocationUpdatesViewController.swift in Sources */,
+				0BAA7406224B93D700A5915F /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

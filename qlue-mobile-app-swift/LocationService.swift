@@ -17,7 +17,7 @@ class LocationService: NSObject, CLLocationManagerDelegate {
     var onAlways: (() -> Void)? = nil
     var onDenial: (() -> Void)? = nil
     
-    var onLocationUpdate: (([CLLocation]) -> Void)? = nil
+    var onLocationUpdate: ((CLLocationManager, [CLLocation]) -> Void)? = nil
 }
 
 // request permissions
@@ -106,7 +106,7 @@ extension LocationService {
 
 extension LocationService {
     
-    func startReceivingLocationChanges(onLocationUpdate: @escaping (([CLLocation]) -> Void)) -> Bool {
+    func startReceivingLocationChanges(onLocationUpdate: @escaping ((CLLocationManager, [CLLocation]) -> Void)) -> Bool {
         let authorizationStatus = CLLocationManager.authorizationStatus()
         if authorizationStatus != .authorizedWhenInUse && authorizationStatus != .authorizedAlways {
             // User has not authorized access to location information.
@@ -136,6 +136,6 @@ extension LocationService {
     }
     
     func locationManager(_ manager: CLLocationManager,  didUpdateLocations locations: [CLLocation]) {
-        onLocationUpdate?(locations)
+        onLocationUpdate?( manager, locations)
     }
 }
