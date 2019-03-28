@@ -11,46 +11,48 @@ import CoreLocation
 
 class LocationUpdatesViewController: UIViewController {
 
-    @IBOutlet weak var start: UIButton!
-    @IBOutlet weak var stop: UIButton!
+    @IBOutlet weak var autoScroll: UISwitch!
     @IBOutlet weak var log: UITextView!
-    
+
     let locationService = LocationService()
     
     var isUpdating = false
     
-    @IBAction func didPressStart(_ sender: Any) {
+    func startTracking() {
         
         self.log.text = self.log.text + String(describing: NSDate()) + "\n"
         
         if locationService.startReceivingLocationChanges(onLocationUpdate: { (locationManager: CLLocationManager, locations: [CLLocation]) in
             let dict = BackendService.updateLocationChange(locationManager: locationManager, locations: locations)
+            var state = ""
+            switch UIApplication.shared.applicationState {
+                
+            case .active:
+                state = "ACTIVE"
+            case .inactive:
+                state = "INACTIVE"
+            case .background:
+                state = "BACKGROUND"
+            }
+            self.log.text = self.log.text + "State: " + state + " Content:" + String(describing: dict)+"\n\n"
             
-            self.log.text = self.log.text + String(describing: dict)+"\n\n"
-            
-            self.scrollTextViewToBottom(textView: self.log)
+            if self.autoScroll.isOn {
+                self.scrollTextViewToBottom(textView: self.log)
+            }
 
         }) {
             self.isUpdating = true
-            
-            self.start.isEnabled = false
-            self.stop.isEnabled = true
         } else {
             self.isUpdating = false
-            
-            self.start.isEnabled = true
-            self.stop.isEnabled = false
         }
     }
     
-    @IBAction func didPressStop(_ sender: Any) {
+    func stopTracking() {
         locationService.stopReceivingLocationChanges()
         
         self.log.text = self.log.text + "\n"
         
         self.isUpdating = false
-        self.start.isEnabled = true
-        self.stop.isEnabled = false
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -58,14 +60,16 @@ class LocationUpdatesViewController: UIViewController {
         
         if !self.isUpdating {
             self.requestAuthorisation(onWhenInUse: {
-                self.start.isEnabled = true
-                self.stop.isEnabled = false
+                
+                let alert = UIAlertController(title: "Location updates", message: "For continous location updates please allow 'Always' access.", preferredStyle: .alert)
+                let action = UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                    self.startTracking()
+                })
+                alert.addAction(action)
+                self.present(alert, animated: true, completion: nil)
             }, onAlways: {
-                self.start.isEnabled = true
-                self.stop.isEnabled = false
+                self.startTracking()
             }) {
-                self.start.isEnabled = false
-                self.stop.isEnabled = false
             }
         }
     }

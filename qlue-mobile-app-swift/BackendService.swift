@@ -46,7 +46,7 @@ class BackendService {
             let data = try JSONSerialization.data(withJSONObject: dictSubmitted, options: [])
             let submitDate = Date()
             
-            BackendService.HTTPPostJSON(url: Config.Production.Backend.url, data: data) { (err, result) in
+            BackendService.HTTPPostJSON(url: Config.isProduction ? Config.Production.Backend.url : Config.Development.Backend.url, data: data) { (err, result) in
                 let responseDate = Date()
                 if(err != nil){
                     print("\(responseDate): failure submitted: \(submitDate) with error \"\(err!.localizedDescription)\": \(dictSubmitted)")

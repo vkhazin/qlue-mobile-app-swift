@@ -21,11 +21,11 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Track use&apos;s position</string>
+	<string>Track users position</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Track use&apos;s position</string>
+	<string>Track users position</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Track use&apos;s position</string>
+	<string>Track users position</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>

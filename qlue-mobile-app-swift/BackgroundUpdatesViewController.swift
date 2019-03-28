@@ -10,16 +10,16 @@ import UIKit
 import CoreLocation
 
 class BackgroundUpdatesViewController: LocationUpdatesViewController {
-
+    
     override func requestAuthorisation( onWhenInUse: (() -> Void)? = nil, onAlways: (() -> Void)? = nil, onDenial: (() -> Void)? = nil) {
         locationService.requestAlwaysAuthorization( onWhenInUse: onWhenInUse, onAlways: onAlways, onDenial: onDenial)
     }    
 
-    @IBAction override func didPressStart(_ sender: Any) {
+    override func startTracking() {
         locationService.locationManager.allowsBackgroundLocationUpdates = true
         locationService.locationManager.pausesLocationUpdatesAutomatically = true
         
-        super.didPressStart(sender)
+        super.startTracking()
         
     }
 }
