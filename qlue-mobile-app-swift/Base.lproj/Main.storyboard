@@ -1,76 +1,140 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Foreground-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="ForegroundUpdatesViewController" customModule="qlue_mobile_app_swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Foreground updates" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
+                                <rect key="frame" x="32.5" y="70" width="310" height="43"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28h-Wq-UBr">
+                                <rect key="frame" x="100" y="143" width="72" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="didPressStart:" destination="9pv-A4-QxB" eventType="touchUpInside" id="jqx-22-JNe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OaB-W9-635">
+                                <rect key="frame" x="204" y="143" width="71" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="didPressStop:" destination="9pv-A4-QxB" eventType="touchUpInside" id="bjX-wQ-jrs"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnK-Ky-osz">
+                                <rect key="frame" x="0.0" y="227" width="375" height="391"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="OaB-W9-635" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="28h-Wq-UBr" secondAttribute="trailing" constant="8" symbolic="YES" id="4PH-WZ-KKt"/>
                             <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstItem="28h-Wq-UBr" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="30" id="6Kg-Ox-TaH"/>
+                            <constraint firstItem="jnK-Ky-osz" firstAttribute="top" secondItem="28h-Wq-UBr" secondAttribute="bottom" constant="30" id="BoJ-XS-1ct"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="jnK-Ky-osz" secondAttribute="bottom" id="CcF-Ha-6er"/>
+                            <constraint firstItem="jnK-Ky-osz" firstAttribute="width" secondItem="tsR-hK-woN" secondAttribute="width" id="Fxk-Md-0iF"/>
+                            <constraint firstItem="jnK-Ky-osz" firstAttribute="centerX" secondItem="PQr-Ze-W5v" secondAttribute="centerX" id="SKQ-Fp-gxN"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="OaB-W9-635" secondAttribute="trailing" constant="100" id="XRN-aE-69Q"/>
+                            <constraint firstItem="28h-Wq-UBr" firstAttribute="centerY" secondItem="OaB-W9-635" secondAttribute="centerY" id="ffU-JP-h2c"/>
+                            <constraint firstItem="KQZ-1w-vlD" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="50" id="mIY-sB-gb9"/>
+                            <constraint firstItem="28h-Wq-UBr" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="100" id="nr6-zH-XeU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Foreground" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="log" destination="jnK-Ky-osz" id="FRw-wF-RFj"/>
+                        <outlet property="start" destination="28h-Wq-UBr" id="V2Z-1m-h7h"/>
+                        <outlet property="stop" destination="OaB-W9-635" id="Clr-LH-blT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--Second-->
+        <!--Background-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="BackgroundUpdatesViewController" customModule="qlue_mobile_app_swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Background updates" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
+                                <rect key="frame" x="28.5" y="70" width="318.5" height="43"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEp-d0-sGZ">
+                                <rect key="frame" x="100" y="143" width="72" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="didPressStart:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="hLi-Of-E08"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7B-RX-acT">
+                                <rect key="frame" x="204" y="143" width="71" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="didPressStop:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Lin-jM-uJd"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWP-3j-GbB">
+                                <rect key="frame" x="0.0" y="227" width="375" height="391"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
+                            <constraint firstItem="wWP-3j-GbB" firstAttribute="width" secondItem="QS5-Rx-YEW" secondAttribute="width" id="47M-FD-IKx"/>
+                            <constraint firstItem="H7B-RX-acT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="tEp-d0-sGZ" secondAttribute="trailing" constant="8" symbolic="YES" id="8ut-xD-CDV"/>
+                            <constraint firstItem="tEp-d0-sGZ" firstAttribute="centerY" secondItem="H7B-RX-acT" secondAttribute="centerY" id="AK7-cu-GST"/>
+                            <constraint firstItem="wWP-3j-GbB" firstAttribute="centerX" secondItem="O1u-W8-tvY" secondAttribute="centerX" id="OZw-2E-KwF"/>
+                            <constraint firstItem="wWP-3j-GbB" firstAttribute="bottom" secondItem="O1u-W8-tvY" secondAttribute="bottom" id="Wfe-1V-Co7"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="H7B-RX-acT" secondAttribute="trailing" constant="100" id="a5d-Bn-evP"/>
+                            <constraint firstItem="wWP-3j-GbB" firstAttribute="top" secondItem="tEp-d0-sGZ" secondAttribute="bottom" constant="30" id="clM-NU-LwR"/>
+                            <constraint firstItem="tEp-d0-sGZ" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="100" id="mSY-3L-Ug1"/>
                             <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="zEq-FU-wV5" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="50" id="rYK-jg-dbc"/>
+                            <constraint firstItem="tEp-d0-sGZ" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="30" id="usu-UR-7rv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Background" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="log" destination="wWP-3j-GbB" id="XVi-4X-fYd"/>
+                        <outlet property="start" destination="tEp-d0-sGZ" id="SjL-5M-sdo"/>
+                        <outlet property="stop" destination="H7B-RX-acT" id="zP7-CO-zV7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
