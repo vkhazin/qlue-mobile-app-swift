@@ -26,9 +26,7 @@ class LocationUpdatesViewController: UIViewController {
         if locationService.startReceivingLocationChanges(onLocationUpdate: { (locationManager: CLLocationManager, locations: [CLLocation]) in
             let dict = BackendService.updateLocationChange(locationManager: locationManager, locations: locations)
             
-            if let dict = dict {
-                self.log.text = self.log.text + String(describing: dict)+"\n\n"
-            }
+            self.log.text = self.log.text + String(describing: dict)+"\n\n"
             
             self.scrollTextViewToBottom(textView: self.log)
 

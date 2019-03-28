@@ -11,52 +11,53 @@ import CoreLocation
 
 class BackendService {
     
-    class func updateLocationChange(locationManager: CLLocationManager, locations: [CLLocation]) -> [String : Any]? {
+    class func updateLocationChange(locationManager: CLLocationManager, locations: [CLLocation]) -> [Any] {
         
-        var dictSubmitted: [String : Any]? = nil
+        var dictSubmitted: [Any] = []
 
-        if let location = locations.last {
-            
-            do {
+        for location in locations {
+        
+            let locationInfo: [String : Any] = [
+                "altitudeAccuracy": location.verticalAccuracy, // *** there is no altitudeAccuracy in API ***
+                "accuracy": location.horizontalAccuracy,
+                "heading": locationManager.heading?.trueHeading ?? 0.0,
+                "longitude": location.coordinate.longitude,
+                "altitude": location.altitude,
+                "latitude": location.coordinate.latitude,
+                "speed": location.speed,
+                "timestamp": 1000 * location.timestamp.timeIntervalSince1970,
                 
-                let locationInfo: [String : Any] = [
-                    "altitudeAccuracy": location.verticalAccuracy, // *** there is no altitudeAccuracy in API ***
-                    "accuracy": location.horizontalAccuracy,
-                    "heading": locationManager.heading?.trueHeading ?? 0.0,
-                    "longitude": location.coordinate.longitude,
-                    "altitude": location.altitude,
-                    "latitude": location.coordinate.latitude,
-                    "speed": location.speed,
-                    "timestamp": location.timestamp.timeIntervalSince1970, //1553562404521.051 vs 1553688405.998379
-                    
-                    "geoPoint": NSNumber(value: location.coordinate.latitude).stringValue + "," + NSNumber(value: location.coordinate.longitude).stringValue,
-                    ]
-                let dateFormatter = ISO8601DateFormatter()
-                var formatOptions = dateFormatter.formatOptions
-                formatOptions.insert([.withFractionalSeconds])
-                dateFormatter.formatOptions = formatOptions
-                let timestamp = dateFormatter.string(from: location.timestamp) //"2019-03-26T01:07:42.329Z"
-                
-                let dict:  [String : Any] = [
-                    "locationInfo": locationInfo,
-                    "timestamp": timestamp
+                "geoPoint": NSNumber(value: location.coordinate.latitude).stringValue + "," + NSNumber(value: location.coordinate.longitude).stringValue,
                 ]
-                let data = try JSONSerialization.data(withJSONObject: dict, options: [])
-                let submitDate = Date()
-                dictSubmitted = dict
-                
-                BackendService.HTTPPostJSON(url: Config.Production.Backend.url, data: data) { (err, result) in
-                    let responseDate = Date()
-                    if(err != nil){
-                        print("\(responseDate): failure submitted: \(submitDate) with error \"\(err!.localizedDescription)\": \(dict)")
-                    }
-                    print("\(responseDate): success submitted: \(submitDate): \(dict)")
+            let dateFormatter = ISO8601DateFormatter()
+            var formatOptions = dateFormatter.formatOptions
+            formatOptions.insert([.withFractionalSeconds])
+            dateFormatter.formatOptions = formatOptions
+            let timestamp = dateFormatter.string(from: location.timestamp) //"2019-03-26T01:07:42.329Z"
+            
+            let dict:  [String : Any] = [
+                "locationInfo": locationInfo,
+                "timestamp": timestamp
+            ]
+            dictSubmitted.append(dict)
+        }
+
+        do {
+            let data = try JSONSerialization.data(withJSONObject: dictSubmitted, options: [])
+            let submitDate = Date()
+            
+            BackendService.HTTPPostJSON(url: Config.Production.Backend.url, data: data) { (err, result) in
+                let responseDate = Date()
+                if(err != nil){
+                    print("\(responseDate): failure submitted: \(submitDate) with error \"\(err!.localizedDescription)\": \(dictSubmitted)")
+                } else {
+                    print("\(responseDate): success submitted: \(submitDate): \(dictSubmitted) responded: \(String(describing: result))")
                 }
             }
-            catch {
-                print(error)
-            }
-            
+
+        }
+        catch {
+            print(error)
         }
 
         return dictSubmitted
