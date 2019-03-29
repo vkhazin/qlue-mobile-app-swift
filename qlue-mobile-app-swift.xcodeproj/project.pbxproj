@@ -12,7 +12,6 @@
 		0BAA7406224B93D700A5915F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAA7405224B93D700A5915F /* Config.swift */; };
 		0BAA7408224BD65000A5915F /* BackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BAA7407224BD65000A5915F /* BackendService.swift */; };
 		1E9D53501AD95DFB40B27258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D5F3CCEBE1B48EC8BF8D1 /* Assets.xcassets */; };
-		1E9D57982BFFC627CA12CEFD /* ForegroundUpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D598FBCFD96C803DDB943 /* ForegroundUpdatesViewController.swift */; };
 		1E9D58081B182D82788BB9D6 /* qlue_mobile_app_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D502B846BBB92580AC94F /* qlue_mobile_app_swiftTests.swift */; };
 		1E9D5C697C9122E0C943FE2B /* BackgroundUpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D5571FC459148B1CFD714 /* BackgroundUpdatesViewController.swift */; };
 		1E9D5D2B3AF8CD895FBB207F /* qlue_mobile_app_swiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D5E29BECC3FCDD2C28E89 /* qlue_mobile_app_swiftUITests.swift */; };
@@ -51,7 +50,6 @@
 		1E9D56FD09FEE33E6DCBEFDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		1E9D5755A309AB1588E79E4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E9D57D8B93478F6C2060F8F /* qlue-mobile-app-swiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "qlue-mobile-app-swiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E9D598FBCFD96C803DDB943 /* ForegroundUpdatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForegroundUpdatesViewController.swift; sourceTree = "<group>"; };
 		1E9D5A3FF7307F9C5FA5B83D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1E9D5E297AD2A1528BC84D04 /* qlue-mobile-app-swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "qlue-mobile-app-swiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9D5E29BECC3FCDD2C28E89 /* qlue_mobile_app_swiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qlue_mobile_app_swiftUITests.swift; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 				1E9D5EB611A71BDEECEB4C07 /* Main.storyboard */,
 				0BAA7405224B93D700A5915F /* Config.swift */,
 				0BAA7403224B834100A5915F /* LocationUpdatesViewController.swift */,
-				1E9D598FBCFD96C803DDB943 /* ForegroundUpdatesViewController.swift */,
 				1E9D5571FC459148B1CFD714 /* BackgroundUpdatesViewController.swift */,
 				0BAA7401224A80D000A5915F /* LocationService.swift */,
 				0BAA7407224BD65000A5915F /* BackendService.swift */,
@@ -279,7 +276,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E9D5E35B65AD48FFB48C566 /* AppDelegate.swift in Sources */,
-				1E9D57982BFFC627CA12CEFD /* ForegroundUpdatesViewController.swift in Sources */,
 				0BAA7402224A80D000A5915F /* LocationService.swift in Sources */,
 				0BAA7408224BD65000A5915F /* BackendService.swift in Sources */,
 				1E9D5C697C9122E0C943FE2B /* BackgroundUpdatesViewController.swift in Sources */,
