@@ -11,7 +11,7 @@ import CoreLocation
 
 class BackendService {
     
-    class func updateLocationChange(locationManager: CLLocationManager, locations: [CLLocation]) -> [Any] {
+    class func updateLocationChange(locationManager: CLLocationManager, locations: [CLLocation], applicationState: String) -> [Any] {
         
         var dictSubmitted: [Any] = []
 
@@ -37,7 +37,10 @@ class BackendService {
             
             let dict:  [String : Any] = [
                 "locationInfo": locationInfo,
-                "timestamp": timestamp
+                "timestamp": timestamp,
+                
+                // DEBUG
+                "applicationState": applicationState
             ]
             dictSubmitted.append(dict)
         }

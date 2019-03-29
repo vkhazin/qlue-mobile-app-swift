@@ -17,13 +17,14 @@ class LocationUpdatesViewController: UIViewController {
     let locationService = LocationService()
     
     var isUpdating = false
+    var logText = ""
     
     func startTracking() {
         
-        self.log.text = self.log.text + String(describing: NSDate()) + "\n"
-        
+        logText += String(describing: NSDate()) + "\n"
+        self.log.text = logText
+
         if locationService.startReceivingLocationChanges(onLocationUpdate: { (locationManager: CLLocationManager, locations: [CLLocation]) in
-            let dict = BackendService.updateLocationChange(locationManager: locationManager, locations: locations)
             var state = ""
             switch UIApplication.shared.applicationState {
                 
@@ -34,10 +35,20 @@ class LocationUpdatesViewController: UIViewController {
             case .background:
                 state = "BACKGROUND"
             }
-            self.log.text = self.log.text + "State: " + state + " Content:" + String(describing: dict)+"\n\n"
+            let dict = BackendService.updateLocationChange(locationManager: locationManager, locations: locations, applicationState: state)
+
+            self.logText += "State: " + state + " Content:" + String(describing: dict)+"\n\n"
             
-            if self.autoScroll.isOn {
-                self.scrollTextViewToBottom(textView: self.log)
+            switch UIApplication.shared.applicationState {
+            case .active:
+                DispatchQueue.main.async {
+                    self.log.text = self.logText
+                    if self.autoScroll.isOn {
+                        self.scrollTextViewToBottom(textView: self.log)
+                    }
+                }
+            case .inactive: break
+            case .background: break
             }
 
         }) {
@@ -58,6 +69,8 @@ class LocationUpdatesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        self.log.text = self.logText
+
         if !self.isUpdating {
             self.requestAuthorisation(onWhenInUse: {
                 
