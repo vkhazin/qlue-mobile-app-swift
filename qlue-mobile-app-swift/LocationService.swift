@@ -126,12 +126,14 @@ extension LocationService {
         
         locationManager.delegate = self
         locationManager.startUpdatingLocation()
-        
+        locationManager.startUpdatingHeading()
+
         return true
     }
 
     func stopReceivingLocationChanges() {
         locationManager.stopUpdatingLocation()
+        locationManager.stopUpdatingHeading()
     }
     
     func locationManager(_ manager: CLLocationManager,  didUpdateLocations locations: [CLLocation]) {
