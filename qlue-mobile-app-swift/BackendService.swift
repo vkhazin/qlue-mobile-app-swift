@@ -40,7 +40,7 @@ class BackendService {
                 "timestamp": timestamp,
                 
                 // DEBUG
-                "applicationState": applicationState
+                "updateType": applicationState
             ]
             dictSubmitted.append(dict)
         }
