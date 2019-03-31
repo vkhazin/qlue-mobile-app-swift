@@ -54,9 +54,14 @@ class BackendService {
             let submitDate = Date()
             
             var bgTask: UIBackgroundTaskIdentifier = .invalid
+            var task: URLSessionDataTask?
+            
             bgTask = UIApplication.shared.beginBackgroundTask {
-                UIApplication.shared.endBackgroundTask(bgTask)
-                bgTask = .invalid
+                if processing {
+                    NSLog("Cancel HTTP request")
+                    task?.cancel()
+                    processing = false
+                }
             }
 
             BackendService.HTTPPostJSON(url: Config.isProduction ? Config.Production.Backend.url : Config.Development.Backend.url, data: data) { (err, result) in
@@ -67,6 +72,7 @@ class BackendService {
                     print("\(responseDate): success submitted: \(submitDate): \(dictSubmitted) responded: \(String(describing: result))")
                 }
                 processing = false
+                task = nil
             }
             
             while(processing) {
@@ -86,7 +92,7 @@ class BackendService {
     
     //Method just to execute request, assuming the response type is string (and not file)
     fileprivate class func HTTPsendRequest(request: URLRequest,
-                         callback: @escaping (Error?, String?) -> Void) {
+                         callback: @escaping (Error?, String?) -> Void) -> URLSessionDataTask {
         let task = URLSession.shared.dataTask(with: request) { (data, res, err) in
             if (err != nil) {
                 callback(err,nil)
@@ -95,11 +101,13 @@ class BackendService {
             }
         }
         task.resume()
+        
+        return task
     }
     
     // post JSON
     fileprivate class func HTTPPostJSON(url: String,  data: Data,
-                      callback: @escaping (Error?, String?) -> Void) {
+                      callback: @escaping (Error?, String?) -> Void) -> URLSessionDataTask {
         
         var request = URLRequest(url: URL(string: url)!)
         
@@ -107,6 +115,6 @@ class BackendService {
         request.addValue("application/json",forHTTPHeaderField: "Content-Type")
         request.addValue("application/json",forHTTPHeaderField: "Accept")
         request.httpBody = data
-        HTTPsendRequest(request: request, callback: callback)
+        return HTTPsendRequest(request: request, callback: callback)
     }
 }
