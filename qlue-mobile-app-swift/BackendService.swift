@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 import CoreLocation
 
 class BackendService {
@@ -15,7 +16,8 @@ class BackendService {
         
         var dictSubmitted: [Any] = []
 
-        for location in locations {
+//        for location in locations {
+        if let location = locations.last {
         
             let locationInfo: [String : Any] = [
                 "altitudeAccuracy": location.verticalAccuracy, // *** there is no altitudeAccuracy in API ***
@@ -40,15 +42,23 @@ class BackendService {
                 "timestamp": timestamp,
                 
                 // DEBUG
-                "updateType": applicationState
+                "updateType": applicationState,
+                "dateSubmitted": dateFormatter.string(from: Date())
             ]
             dictSubmitted.append(dict)
         }
 
         do {
+            var processing = true
             let data = try JSONSerialization.data(withJSONObject: dictSubmitted, options: [])
             let submitDate = Date()
             
+            var bgTask: UIBackgroundTaskIdentifier = .invalid
+            bgTask = UIApplication.shared.beginBackgroundTask {
+                UIApplication.shared.endBackgroundTask(bgTask)
+                bgTask = .invalid
+            }
+
             BackendService.HTTPPostJSON(url: Config.isProduction ? Config.Production.Backend.url : Config.Development.Backend.url, data: data) { (err, result) in
                 let responseDate = Date()
                 if(err != nil){
@@ -56,8 +66,16 @@ class BackendService {
                 } else {
                     print("\(responseDate): success submitted: \(submitDate): \(dictSubmitted) responded: \(String(describing: result))")
                 }
+                processing = false
             }
-
+            
+            while(processing) {
+                NSLog("sleep")
+                Thread.sleep(forTimeInterval: 0.1)
+            }
+            UIApplication.shared.endBackgroundTask(bgTask)
+            bgTask = .invalid
+            
         }
         catch {
             print(error)
