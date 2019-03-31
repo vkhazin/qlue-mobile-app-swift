@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 import CoreLocation
 
 class BackendService {
@@ -15,7 +16,8 @@ class BackendService {
         
         var dictSubmitted: [Any] = []
 
-        for location in locations {
+//        for location in locations {
+        if let location = locations.last {
         
             let locationInfo: [String : Any] = [
                 "altitudeAccuracy": location.verticalAccuracy, // *** there is no altitudeAccuracy in API ***
@@ -40,15 +42,28 @@ class BackendService {
                 "timestamp": timestamp,
                 
                 // DEBUG
-                "applicationState": applicationState
+                "updateType": applicationState,
+                "dateSubmitted": dateFormatter.string(from: Date())
             ]
             dictSubmitted.append(dict)
         }
 
         do {
+            var processing = true
             let data = try JSONSerialization.data(withJSONObject: dictSubmitted, options: [])
             let submitDate = Date()
             
+            var bgTask: UIBackgroundTaskIdentifier = .invalid
+            var task: URLSessionDataTask?
+            
+            bgTask = UIApplication.shared.beginBackgroundTask {
+                if processing {
+                    NSLog("Cancel HTTP request")
+                    task?.cancel()
+                    processing = false
+                }
+            }
+
             BackendService.HTTPPostJSON(url: Config.isProduction ? Config.Production.Backend.url : Config.Development.Backend.url, data: data) { (err, result) in
                 let responseDate = Date()
                 if(err != nil){
@@ -56,8 +71,17 @@ class BackendService {
                 } else {
                     print("\(responseDate): success submitted: \(submitDate): \(dictSubmitted) responded: \(String(describing: result))")
                 }
+                processing = false
+                task = nil
             }
-
+            
+            while(processing) {
+                NSLog("sleep")
+                Thread.sleep(forTimeInterval: 0.1)
+            }
+            UIApplication.shared.endBackgroundTask(bgTask)
+            bgTask = .invalid
+            
         }
         catch {
             print(error)
@@ -68,7 +92,7 @@ class BackendService {
     
     //Method just to execute request, assuming the response type is string (and not file)
     fileprivate class func HTTPsendRequest(request: URLRequest,
-                         callback: @escaping (Error?, String?) -> Void) {
+                         callback: @escaping (Error?, String?) -> Void) -> URLSessionDataTask {
         let task = URLSession.shared.dataTask(with: request) { (data, res, err) in
             if (err != nil) {
                 callback(err,nil)
@@ -77,11 +101,13 @@ class BackendService {
             }
         }
         task.resume()
+        
+        return task
     }
     
     // post JSON
     fileprivate class func HTTPPostJSON(url: String,  data: Data,
-                      callback: @escaping (Error?, String?) -> Void) {
+                      callback: @escaping (Error?, String?) -> Void) -> URLSessionDataTask {
         
         var request = URLRequest(url: URL(string: url)!)
         
@@ -89,6 +115,6 @@ class BackendService {
         request.addValue("application/json",forHTTPHeaderField: "Content-Type")
         request.addValue("application/json",forHTTPHeaderField: "Accept")
         request.httpBody = data
-        HTTPsendRequest(request: request, callback: callback)
+        return HTTPsendRequest(request: request, callback: callback)
     }
 }

@@ -17,7 +17,8 @@ class BackgroundUpdatesViewController: LocationUpdatesViewController {
 
     override func startTracking() {
         locationService.locationManager.allowsBackgroundLocationUpdates = true
-        locationService.locationManager.pausesLocationUpdatesAutomatically = true
+        locationService.locationManager.pausesLocationUpdatesAutomatically = false
+        locationService.locationManager.showsBackgroundLocationIndicator = true
         
         super.startTracking()
         

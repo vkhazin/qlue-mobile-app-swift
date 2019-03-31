@@ -27,11 +27,11 @@ class LocationUpdatesViewController: UIViewController {
         if locationService.startReceivingLocationChanges(onLocationUpdate: { (locationManager: CLLocationManager, locations: [CLLocation]) in
             var state = ""
             switch UIApplication.shared.applicationState {
-                
+
             case .active:
-                state = "ACTIVE"
+                state = "FOREGROUND"
             case .inactive:
-                state = "INACTIVE"
+                state = "BACKGROUND"
             case .background:
                 state = "BACKGROUND"
             }
